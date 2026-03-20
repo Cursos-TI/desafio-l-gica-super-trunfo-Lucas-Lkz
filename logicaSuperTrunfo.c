@@ -1,11 +1,12 @@
 #include <stdio.h>
 
 int main(){
+    int opcao;
 //variaveis carta1
     
     char estado1[3], codigo1[5], cidade1[50];
     unsigned long int populacao1;
-    int turisticos1, opcao;
+    int turisticos1;
     float area1, pib1, densidade1, capita1, superPoder1, superPoder2;
 
 //variaveis carta2
