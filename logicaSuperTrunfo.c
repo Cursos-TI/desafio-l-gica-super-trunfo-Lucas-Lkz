@@ -5,7 +5,7 @@ int main(){
     
     char estado1[3], codigo1[5], cidade1[50];
     unsigned long int populacao1;
-    int turisticos1;
+    int turisticos1, opcao;
     float area1, pib1, densidade1, capita1, superPoder1, superPoder2;
 
 //variaveis carta2
@@ -96,27 +96,73 @@ int main(){
     printf("------------------------\n");
 
 //comparativo das cartas (1 = carta 1 venceu | 0 = carta 2 venceu):
-   printf("\n --- RESULTADO DA COMPARACAO --- \n");
-   printf("População: %d\n", populacao1 > populacao2);
-   printf("Área: %d\n", area1 > area2);
-   printf("PIB: %d\n", pib1 > pib2);
-   printf("Pontos Turísticos: %d\n", turisticos1 > turisticos2);
-   printf("Densidade Populacional: %d\n", densidade1 < densidade2);
-   printf("PIB Per Capita: %d\n", capita1 > capita2);
-   printf("Super Poder: %d\n", superPoder1 > superPoder2);
-   printf("\n-------------------------------------\n");
+   //printf("\n --- RESULTADO DA COMPARACAO --- \n");
+   //printf("População: %d\n", populacao1 > populacao2);
+   //printf("Área: %d\n", area1 > area2);
+   //printf("PIB: %d\n", pib1 > pib2);
+   //printf("Pontos Turísticos: %d\n", turisticos1 > turisticos2);
+   //printf("Densidade Populacional: %d\n", densidade1 < densidade2);
+   //printf("PIB Per Capita: %d\n", capita1 > capita2);
+   //printf("Super Poder: %d\n", superPoder1 > superPoder2);
+   //printf("\n-------------------------------------\n");
 
 //Comparação por atributo:
-   printf("Comparação de cartas(Atributo: População):\n");
-   printf("Carta1-População: %lu\n", populacao1);
-   printf("Carta2-População: %lu\n", populacao2);
+   //printf("Comparação de cartas(Atributo: População):\n");
+   //printf("Carta1-População: %lu\n", populacao1);
+   //printf("Carta2-População: %lu\n", populacao2);
 
-   if (populacao1 > populacao2){
-    printf("Carta1 venceu!\n");
-   }else {
-    printf("Carta2 venceu!\n");
-   }
+   //if (populacao1 > populacao2){
+    //printf("Carta1 venceu!\n");
+   //}else {
+    //printf("Carta2 venceu!\n");
 
-   return 0;
+    printf("Menu de Comparação: \n");
+    printf("1. População \n");
+    printf("2. Área \n");
+    printf("3. PIB \n");
+    printf("4. Pontos turísticos \n");
+    printf("5. Densidade Demográfica \n");
+    scanf("%d", &opcao);
 
-}
+    switch (opcao)
+    {
+    case 1:
+        if (populacao1 > populacao2){
+            printf("A Carta vencedora é: %s\n", cidade1);
+        } else {
+            printf("A carta vencedora é: %s", cidade2);
+        } 
+        break;
+    
+    case 2:
+        if (area1 > area2) {
+            printf("A carta vencedora é: %s\n", cidade1);
+        } else {
+            printf("A carta vencedora é: %s\n", cidade2);
+        }
+        break;
+    case 3:
+        if (pib1 > pib2) {
+            printf("A carta vencedora é: %s\n", cidade1);
+        } else {
+            printf("A carta vencedora é: %s\n", cidade2);
+        }
+        break;
+    case 4:
+        if (turisticos1 > turisticos2) {
+            printf("A carta vencedora é: %s\n", cidade1);
+        } else {
+            printf("A carta vencedora é: %s\n", cidade2);
+        }   
+        break;
+    case 5:
+        if (densidade1 < densidade2) {
+            printf("A carta vencedora é: %s\n", cidade1);
+        } else {
+            printf("A carta vencedora é: %s\n", cidade2);
+        }
+        break;
+    default:
+        printf("Opção inválida, selecione uma opção entre 1 e 5\n");
+    }
+    }
